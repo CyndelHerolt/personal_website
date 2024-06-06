@@ -48,8 +48,8 @@ onMounted(() => {
       <RouterLink to="/projets">Projets</RouterLink>
     </nav>
     <nav class="reseaux">
-      <a href="https://github.com/CyndelHerolt" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/CyndelHerolt" target="_blank"><button>GitHub</button></a>
+      <a href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank"><button>LinkedIn</button></a>
     </nav>
   </header>
 
@@ -82,8 +82,19 @@ nav {
 .reseaux {
   gap: 1rem;
 
-  a {
+  button {
+    background-color: transparent;
+    border: solid 1px var(--color-text);
     color: var(--color-text) !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-text);
+      color: var(--color-background) !important;
+    }
   }
 }
+
 </style>
