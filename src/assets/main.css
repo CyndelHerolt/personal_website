@@ -1,0 +1,24 @@
+@import './base.css';
+@import './keyframes.css';
+
+#app {
+    margin: 0;
+
+    a {
+        color: var(--primary);
+        font-weight: bolder;
+        transition: ease-in-out .2s;
+
+        &:hover {
+            opacity: .8;
+            transition: ease-in-out .2s;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        margin: 100px;
+        padding: 0;
+    }
+}

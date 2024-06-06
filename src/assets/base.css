@@ -1,0 +1,112 @@
+@import url('https:fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+/* color palette from <https:github.com/vuejs/theme> */
+:root {
+    --white: #f3f3f3;
+    --black: #282828;
+    --primary: #FF5722;
+}
+
+/* semantic color variables for this project */
+:root {
+    --color-background: var(--white);
+    --color-card: #e5e5e5;
+    --color-text: var(--black);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: var(--black);
+        --color-card: #333;
+        --color-text: var(--white);
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    font-weight: normal;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--color-card);
+}
+
+#trace {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+    mix-blend-mode: difference;
+    z-index: 10;
+    pointer-events: none;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+main {
+    margin: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: .8;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: .7;
+}
+
+.coloredTitle {
+    color: var(--primary);
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    font-family: 'Montserrat', monospace;
+}
+
+span {
+    transition: color 1s;
+    font-weight: 900;
+}
+
+span:hover {
+    transition: color 0s;
+    color: var(--primary);
+}
+
+p {
+    opacity: .8;
+}
