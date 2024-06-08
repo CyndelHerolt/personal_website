@@ -9,124 +9,39 @@ const formatText = (text) => {
   }
   return formattedText;
 };
-
-let minimoi;
-
-onMounted(() => {
-  const minimoi = document.querySelector('.minimoi.sharp');
-  const container = document.querySelector('.image-container');
-  container.addEventListener('mousemove', (e) => {
-    const x = e.pageX - e.target.offsetLeft;
-    const y = e.pageY - e.target.offsetTop;
-    minimoi.style.setProperty('--x', `${x}px`);
-    minimoi.style.setProperty('--y', `${y}px`);
-  });
-  container.addEventListener('mouseleave', () => {
-    minimoi.style.setProperty('--x', '-1000px');
-    minimoi.style.setProperty('--y', '-1000px');
-  });
-});
 </script>
 
 <template>
   <main>
     <section class="landing">
-      <div>
-        <h1 class="animatedTxt" ref="animatedTxt">Cyndel Herolt</h1>
-        <h2 class="coloredTitle">Développeuse web</h2>
-        <h3>Fullstack</h3>
-        <small>
-          <i class="fas fa-at"></i>
-          cyndelherolt@gmail.com
-        </small>
-        |
-        <small>
-          <i class="fas fa-building"></i>
-          URCA - IUT de Troyes
-        </small>
-
-        <article class="intro">
+      <article>
+        <img src="/img/minimoi.png" alt="">
+        <div class="intro">
+          <div>
+            <h1>Cyndel Herolt</h1>
+            <h2>Développeuse Web</h2>
+            <h3>Fullstack</h3>
+          </div>
+          <ul>
+            <li>
+              <i class="fas fa-at"></i> cyndelherolt@gmail.com
+            </li>
+            <li>
+              <i class="fas fa-building"></i> URCA - IUT de Troyes
+            </li>
+          </ul>
           <p>
-            Une volonté de produire des applications web de <strong>qualité</strong> en respectant les normes d'<strong>accessibilité</strong>
-            et en adoptant une démarche d'<strong>éco-conception</strong>.
+            Produire des applications web de qualité en respectant les normes d'accessibilité et en adoptant une
+            démarche d'éco-conception.
           </p>
-        </article>
-      </div>
-
-      <article class="stack">
-        <h3>Tech stack</h3>
-        <ul>
-          <li>
-            <img src="/icons/sf.png" alt="">
-            <div>
-              <p class="name">Symfony ✨</p>
-              <small>UX Live Components, EasyAdmin, UX Turbo, Mercure</small>
-            </div>
-          </li>
-          <li>
-            <img src="/icons/vuejs.png" alt="">
-            <div>
-              <p class="name">VueJs</p>
-              <small>ThreeJs Integration, Vue Router, Vuex, Vue CLI</small>
-            </div>
-          </li>
-          <li>
-            <img src="/icons/Ubuntu.png" alt="">
-            <div>
-              <p class="name">Ubuntu</p>
-              <small>
-                Apache, Ansible, MySQL, Docker, Git, Multipass
-              </small>
-            </div>
-          </li>
-          <li>
-            <img src="/icons/Git.png" alt="">
-            <div>
-              <p class="name">Git</p>
-              <small>
-                GitHub, GitFlow, CI/CD, GitHub Actions
-              </small>
-            </div>
-          </li>
-          <li>
-            <img src="/icons/Figma.png" alt="">
-            <div>
-              <p class="name">Figma</p>
-              <small>
-                Wireframes, Prototypes, Design Systems
-              </small>
-            </div>
-          </li>
-          <li>
-            <img src="/icons/JetBrains.png" alt="">
-            <div>
-              <p class="name">JetBrains</p>
-              <small>
-                PhpStorm, DataGrip, YouTrack, Writerside
-              </small>
-            </div>
-          </li>
-          <li>
-            <img src="/icons/opquast1.png" alt="">
-            <div>
-              <p class="name">Opquast</p>
-              <small>
-                Certification : "Avancé" 2024
-              </small>
-            </div>
-          </li>
-        </ul>
+        </div>
       </article>
-
-      <div class="image-container">
-        <img class="minimoi blurred" src="/img/minimoi.jpg" alt="mystère :)">
-        <img class="minimoi sharp" src="/img/minimoi.jpg" alt="mystère :)">
-      </div>
     </section>
 
-    <section class="objectifs" id="objectifs">
+    <section id="objectifs">
       <article>
         <div class="content">
+          <img class="elips" src="/img/elips.png" alt="">
           <div>
             <h2 v-html="formatText('Qualité')"></h2>
             <p>
@@ -151,97 +66,128 @@ onMounted(() => {
         <p class="help">Ces objectifs sont des axes de travail et constituent une démarche d'amélioration continue.</p>
       </article>
     </section>
+
+    <section>
+      <article id="competences">
+        <ul>
+          <li>
+            <div class="icon">
+              <img src="/icons/sf.png" alt="logo du framework symfony">
+            </div>
+            <div class="descript">
+              <h4 style="color: #A3DF42">Symfony ✨</h4>
+              <p>UX Live Components, EasyAdmin, UX Turbo, Mercure</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="/icons/vuejs.png" alt="logo du framework Vue.js">
+            </div>
+            <div class="descript">
+              <h4>VueJS</h4>
+              <p>ThreeJs Integration, Vue Routeur, Vuex, Vue CLI</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="/icons/Ubuntu.png" alt="logo de Ubuntu">
+            </div>
+            <div class="descript">
+              <h4>Ubuntu</h4>
+              <p>Apache, Ansible, Docker, Multipass</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="/icons/Git.png" alt="logo de Git">
+            </div>
+            <div class="descript">
+              <h4>Git</h4>
+              <p>GitHub, GitFlow, CI/CD, GitHub Actions</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="/icons/Figma.png" alt="logo de Figma">
+            </div>
+            <div class="descript">
+              <h4>Figma</h4>
+              <p>Wireframes, Prototypes, Design Systems</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="/icons/JetBrains.png" alt="logo de JetBrains">
+            </div>
+            <div class="descript">
+              <h4>JetBrains</h4>
+              <p>PhpStorm, DataGrip, YouTrack, Writerside</p>
+            </div>
+          </li>
+          <li>
+            <div class="icon">
+              <img src="/icons/opquast1.png" alt="logo de Opquast">
+            </div>
+            <div class="descript">
+              <h4>Opquast</h4>
+              <p>Certification : “Avancé” 2024</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
   </main>
 </template>
 
 <style>
 .landing {
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-  margin: 25px 0;
 
-  .intro {
-    margin-top: 3rem;
-    width: 80%;
+  article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
 
-    p {
-      line-height: 2;
+    img {
+      width: 400px;
+    }
 
-      strong {
+    .intro {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+
+      h2 {
         color: var(--primary);
-        font-weight: bolder;
       }
-    }
-  }
 
-  .stack {
-    width: 60%;
-
-    ul {
-      padding: 0;
-
-      li {
+      ul {
+        padding: 0;
         display: flex;
-        justify-content: start;
-        gap: 1rem;
-        margin-top: 1rem;
+        gap: 2rem;
 
-        .name {
-          font-size: 1rem;
-          color: var(--primary);
-          font-weight: 700;
+        li {
+          list-style: none;
+          font-weight: 300;
         }
-
-        img {
-          width: 40px;
-          height: 40px;
-          background-color: var(--color-card);
-          padding: .5rem;
-          border-radius: 5px;
-        }
-
       }
-    }
-  }
 
-  .minimoi {
-    opacity: .5;
-    transition: filter 0.3s ease;
-    position: absolute;
-    left: -1%;
-    bottom: -20%;
-    width: 400px;
-    border-radius: 50%;
-    --x: 0px;
-    --y: 0px;
-
-    &.blurred {
-      filter: blur(15px);
-    }
-
-    &.sharp {
-      mask-image: radial-gradient(circle 50px at var(--x, 0px) var(--y, 0px), black 0%, black 0%, transparent 100%);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100px;
-      height: 100px;
-      background-image: url('/img/minimoi.jpg');
-      background-repeat: no-repeat;
-      background-position: var(--x) var(--y);
-      border-radius: 50%;
-      pointer-events: none;
+      p {
+        font-family: "Montserrat Alternates", sans-serif;
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        //line-height: 2;
+        font-weight: 500;
+        opacity: 1;
+        color: var(--color-text);
+      }
     }
   }
 }
 
-.objectifs {
-  margin-top: 20rem;
+#objectifs {
+  margin-top: 30rem;
 
   .content {
     width: 100%;
@@ -249,6 +195,12 @@ onMounted(() => {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    .elips {
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
 
     div {
       text-align: center;
@@ -266,6 +218,57 @@ onMounted(() => {
     text-align: center;
     font-size: 1rem;
     color: var(--primary);
+  }
+}
+
+#competences {
+  margin-top: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .descript {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+
+        h4 {
+          margin: 0;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 

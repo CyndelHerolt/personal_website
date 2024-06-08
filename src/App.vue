@@ -19,7 +19,7 @@ onMounted(() => {
     let distanceToEdge = Math.min(e.pageX, e.pageY, document.documentElement.scrollWidth - e.pageX, document.documentElement.scrollHeight - e.pageY);
 
     // distance pour déterminer la taille de l'élément #trace
-    let size = Math.max(1, distanceToEdge /3);
+    let size = Math.max(1, distanceToEdge /5);
 
     trace.style.width = size + 'px';
     trace.style.height = size + 'px';
@@ -36,64 +36,95 @@ onMounted(() => {
   }
 
   animate();
+
+  // -------------------------------------
+
+  const menu = document.querySelector('.menu_container');
+  const sticky = menu.offsetTop; // Ajoutez un décalage si nécessaire
+
+  window.onscroll = function() {
+    if (window.scrollY >= sticky) {
+      menu.classList.add('sticky');
+    } else {
+      menu.classList.remove('sticky');
+    }
+  };
+
 });
 </script>
 
 <template>
   <div id="trace"></div>
-  <header>
-    <nav>
-      <RouterLink to="/">Accueil</RouterLink>
-      <RouterLink to="/objectifs">Objectifs</RouterLink>
-      <RouterLink to="/projets">Projets</RouterLink>
-    </nav>
-    <nav class="reseaux">
-      <a href="https://github.com/CyndelHerolt" target="_blank"><button>GitHub</button></a>
-      <a href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank"><button>LinkedIn</button></a>
-    </nav>
+  <header class="menu_container">
+      <nav class="menu">
+        <RouterLink to="/">Accueil</RouterLink>
+        <RouterLink to="/obj">Objectifs</RouterLink>
+        <RouterLink to="/comp">Compétences</RouterLink>
+        <RouterLink to="/proj">Projets</RouterLink>
+        <RouterLink to="/cont">Contact</RouterLink>
+      </nav>
   </header>
+      <nav class="reseaux">
+        <a href="https://github.com/CyndelHerolt" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank">LinkedIn</a>
+      </nav>
 
   <RouterView/>
 </template>
 
 <style scoped>
-header {
-  position: relative;
-  z-index: 1;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
+.sticky {
+  position: fixed !important;
+  top: 0;
+  background: transparent;
 }
 
-nav {
+.menu_container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
   display: flex;
-  justify-content: start;
-  gap: 1rem;
+  justify-content: center;
 
-  a.router-link-active {
+  .menu {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 4rem;
+    background-color: var(--primary-dark);
+    height: fit-content;
+    border-radius: 10px;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+  }
+
+  a {
+    color: var(--color-text) !important;
     text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &.router-link-active {
+      color: var(--primary) !important;
+    }
+
     &:hover {
-      opacity: 1 !important;
-      cursor: default;
+      color: var(--primary) !important;
     }
   }
 }
 
 .reseaux {
-  gap: 1rem;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
 
-  button {
-    background-color: transparent;
-    border: solid 1px var(--color-text);
+  a {
     color: var(--color-text) !important;
-    padding: 0.5rem 1.5rem;
-    border-radius: 20px;
-
-    &:hover {
-      cursor: pointer;
-      background-color: var(--color-text);
-      color: var(--color-background) !important;
-    }
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
 
