@@ -49,9 +49,13 @@ import Competences from '../components/Competences.vue';
     justify-content: center;
     align-items: center;
     gap: 9rem;
+    margin-left: 8rem;
 
     img {
       width: 400px;
+      opacity: .7;
+      background-color: transparent;
+      border-radius: 50%;
     }
 
     .intro {

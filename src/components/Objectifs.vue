@@ -13,7 +13,20 @@ const formatText = (text) => {
   <section id="objectifs">
     <article>
       <div class="content">
-        <img class="elips" src="/img/elips.png" alt="">
+        <!--        <img class="elips" src="/img/elips.png" alt="">-->
+        <div id="galaxy">
+          <div class="ellipse ellipse1">
+            <div class="circle circle1"></div>
+          </div>
+          <div class="ellipse ellipse2">
+            <div class="circle circle2"></div>
+          </div>
+          <div class="ellipse ellipse3">
+            <div class="circle circle3"></div>
+          </div>
+          <div class="gradient"></div>
+        </div>
+
         <div>
           <h2 v-html="formatText('Qualité')"></h2>
           <p>
@@ -51,10 +64,81 @@ const formatText = (text) => {
     align-items: center;
     gap: 1rem;
 
-    .elips {
+    #galaxy {
+      transform: rotate(-11.45deg);
+      position: absolute;
+      top: 150vh;
+      width: 50%;
+      height: 100px;
+      opacity: .8;
+      z-index: -1;
+    }
+
+    .ellipse {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       width: 100%;
-      z-index: -1;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px dotted rgba(255, 255, 255, 0.44);
+    }
+
+    .ellipse1 {
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: 10%;
+    }
+
+    .ellipse2 {
+      width: 60%;
+      height: 60%;
+      top: 20%;
+      left: 20%;
+    }
+
+    .ellipse3 {
+      width: 40%;
+      height: 40%;
+      top: 30%;
+      left: 30%;
+    }
+
+    .gradient {
+      position: absolute;
+      width: 100%;
+      height: 400%;
+      //left: -50%;
+      top: -150%;
+      background: radial-gradient(circle at center, rgba(66, 223, 223, 0.5) 2%, rgba(21, 21, 21, 0) 40%);
+      border-radius: 50%;
+      overflow: visible;
+      animation: rotate 10s linear infinite;
+    }
+
+    .circle {
+      width: 5px;
+      height: 5px;
+      background-color: rgba(66, 223, 223, 0.8); /* or any color you prefer */
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .circle1 {
+      top: -23px;
+      right: 40%;
+    }
+
+    .circle2 {
+      top: -13px;
+      left: 45%;
+    }
+
+    .circle3 {
+      bottom: -19px;
+      left: 10%;
     }
 
     div {
