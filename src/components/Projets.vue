@@ -10,6 +10,7 @@ import {RouterLink, RouterView} from 'vue-router'
       <div class="infos">
         <h2>Unifolio</h2>
         <p>Outil de création, suivi et évaluation de portfolios universitaires</p>
+        <em>Conception, Maquettage, Développement</em>
         <div>
           <div class="icon">
             <img src="/icons/sf.png" alt="logo du framework symfony">
@@ -26,13 +27,15 @@ import {RouterLink, RouterView} from 'vue-router'
       <div class="infos">
         <h2>Intranet</h2>
         <p>Outil de gestion de formation</p>
+        <em>Développement, Refonte, Optimisation</em>
         <div>
           <div class="icon">
             <img src="/icons/sf.png" alt="logo du framework symfony">
           </div>
           <div class="descript">
             <h4 style="color: #A3DF42">Symfony ✨</h4>
-            <p>UX Live Components, EasyAdmin, UX Turbo, Mercure</p>
+            <p>UX Live Components, Abstract Factory, Forms
+            </p>
           </div>
         </div>
       </div>
@@ -41,7 +44,8 @@ import {RouterLink, RouterView} from 'vue-router'
       <div class="banniere" style="background-image: url(/img/wwcv2.png)"></div>
       <div class="infos">
         <h2>WWC V2</h2>
-        <p>Outil de gestion de formation</p>
+        <p>Application web type jeu d'entreprise</p>
+        <em>Refonte, Maquettage, Développement</em>
         <div>
           <div class="icon">
             <img src="/icons/sf.png" alt="logo du framework symfony">
@@ -53,9 +57,6 @@ import {RouterLink, RouterView} from 'vue-router'
         </div>
       </div>
     </article>
-
-    <h1>Photographie</h1>
-    <h1>Illustrations</h1>
   </section>
 </template>
 
@@ -69,8 +70,8 @@ import {RouterLink, RouterView} from 'vue-router'
   gap: 5rem;
 
   h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 2rem;
+    font-weight: 600;
     color: var(--primary);
   }
 
@@ -95,64 +96,65 @@ import {RouterLink, RouterView} from 'vue-router'
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       height: 100%;
       padding: 0 2rem;
 
-      h2 {
-        color: var(--color-text);
-        opacity: 1;
-        font-size: 7rem;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
+    h2 {
+      color: var(--color-text);
+      opacity: 1;
+      font-size: 7rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
 
-      p {
-        font-size: 1.5rem;
-        font-weight: 500;
-        opacity: 1;
-      }
+    p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      opacity: 1;
+    }
 
-      div {
+    div {
+      display: flex;
+      gap: 2rem;
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        background-color: #1D1D1D;
+        border-radius: 5px;
         display: flex;
-        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px rgba(206, 206, 206, 0.1);
 
-        .icon {
-          width: 50px;
-          height: 50px;
-          padding: 10px;
-          background-color: #1D1D1D;
-          border-radius: 5px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: solid 1px rgba(206, 206, 206, 0.1);
+        img {
+          width: 100%;
+        }
+      }
 
-          img {
-            width: 100%;
-          }
+      .descript {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+
+        h4 {
+          margin: 0;
+          opacity: 1;
+          font-weight: 600;
         }
 
-        .descript {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          gap: 0.5rem;
-
-          h4 {
-            margin: 0;
-            opacity: 1;
-            font-weight: 600;
-          }
-
-          p {
-            font-size: 1.25rem;
-            font-weight: 300;
-            opacity: 1;
-          }
+        p {
+          font-size: 1.25rem;
+          font-weight: 300;
+          opacity: 1;
         }
       }
     }
   }
+}
+
 }
 </style>

@@ -18,7 +18,7 @@
           </div>
           <div class="descript">
             <h4 style="color: #A3DF42">Symfony ✨</h4>
-            <p>UX Live Components, EasyAdmin, UX Turbo, Mercure</p>
+            <p>UX Live Components, UX Turbo, Mercure, EasyAdmin</p>
           </div>
         </li>
         <li>

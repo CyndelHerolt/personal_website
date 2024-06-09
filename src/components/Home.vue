@@ -10,7 +10,7 @@ import Projets from './Projets.vue';
   <main>
     <section class="landing">
       <article>
-        <img src="/img/minimoi.png" alt="">
+        <img src="/img/minimoi.png" alt="auto-portrait">
         <div class="intro">
           <div>
             <h1>Cyndel Herolt</h1>
