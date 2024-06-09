@@ -3,6 +3,12 @@
 </script>
 
 <template>
+  <div class="radial1">
+    <div class="radial"></div>
+  </div>
+  <div class="radial2">
+    <div class="radial"></div>
+  </div>
   <section>
     <article id="competences">
       <ul>
@@ -123,6 +129,44 @@
         }
       }
     }
+  }
+}
+
+.radial1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 200vh;
+  right: 0;
+  overflow-x: hidden;
+
+  .radial {
+    position: absolute;
+    right: -55%;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: radial-gradient(circle at center, rgb(66, 223, 223, 0.3) 2%, rgba(21, 21, 21, 0) 40%);
+    border-radius: 50%;
+  }
+}
+
+.radial2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 240vh;
+  left: 0;
+  overflow-x: hidden;
+
+  .radial {
+    position: absolute;
+    left: -55%;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background: radial-gradient(circle at center, rgb(66, 223, 223, 0.5) 2%, rgba(21, 21, 21, 0) 45%);
+    border-radius: 50%;
   }
 }
 </style>
