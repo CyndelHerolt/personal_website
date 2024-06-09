@@ -82,7 +82,8 @@
 
 <style scoped>
 #competences {
-  margin-top: 30rem;
+  padding-top: 10rem;
+  margin-top: 10rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;

@@ -1,8 +1,8 @@
 <script setup>
 import {onMounted, ref} from 'vue';
 // import des components
-import Objectifs from '../components/Objectifs.vue';
-import Competences from '../components/Competences.vue';
+import Objectifs from './Objectifs.vue';
+import Competences from './Competences.vue';
 </script>
 
 <template>
@@ -42,6 +42,7 @@ import Competences from '../components/Competences.vue';
 
 <style scoped>
 .landing {
+  margin-bottom: 15rem;
 
   article {
     display: flex;
@@ -49,13 +50,14 @@ import Competences from '../components/Competences.vue';
     justify-content: center;
     align-items: center;
     gap: 9rem;
-    margin-left: 8rem;
+    margin-left: 6rem;
 
     img {
       width: 400px;
       opacity: .7;
       background-color: transparent;
       border-radius: 50%;
+      z-index: 1;
     }
 
     .intro {

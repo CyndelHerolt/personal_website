@@ -55,7 +55,9 @@ const formatText = (text) => {
 
 <style scoped>
 #objectifs {
-  margin-top: 30rem;
+  padding-top: 15rem;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
 
   .content {
     width: 100%;
