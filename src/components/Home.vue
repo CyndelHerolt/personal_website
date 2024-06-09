@@ -3,6 +3,7 @@ import {onMounted, ref} from 'vue';
 // import des components
 import Objectifs from './Objectifs.vue';
 import Competences from './Competences.vue';
+import Projets from './Projets.vue';
 </script>
 
 <template>
@@ -36,6 +37,7 @@ import Competences from './Competences.vue';
 
     <Competences />
 
+    <Projets />
 
   </main>
 </template>
