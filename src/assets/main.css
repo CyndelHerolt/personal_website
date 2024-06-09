@@ -2,7 +2,7 @@
 @import './keyframes.css';
 
 #app {
-    margin: 100px;
+    padding: 75px 100px;
 
     a {
         color: var(--primary);
