@@ -4,9 +4,31 @@ import {onMounted, ref} from 'vue';
 import Objectifs from './Objectifs.vue';
 import Competences from './Competences.vue';
 import Projets from './Projets.vue';
+
+onMounted(() => {
+  const menu = document.querySelector('.menu_container');
+  const sticky = menu.offsetTop; // Ajoutez un décalage si nécessaire
+
+  window.onscroll = function () {
+    if (window.scrollY >= sticky) {
+      menu.classList.add('sticky');
+    } else {
+      menu.classList.remove('sticky');
+    }
+  };
+});
 </script>
 
 <template>
+  <header class="menu_container">
+    <nav class="menu">
+      <a ref="homeLink" v-scroll-to="'#app'">Accueil</a>
+      <a ref="objectifsLink" v-scroll-to="'#objectifs'">Objectifs</a>
+      <a ref="competencesLink" v-scroll-to="'#competences'">Compétences</a>
+      <a ref="projetsLink" v-scroll-to="'#projets'">Projets</a>
+      <a ref="contactLink" v-scroll-to="'#contact'">Contact</a>
+    </nav>
+  </header>
   <main>
     <section class="landing">
       <article>
@@ -43,6 +65,52 @@ import Projets from './Projets.vue';
 </template>
 
 <style scoped>
+.sticky {
+  position: fixed !important;
+  top: 0;
+  background: transparent;
+}
+
+.menu_container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+
+  .menu {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 4rem;
+    background-color: var(--secondary-dark);
+    height: fit-content;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: solid 1px rgba(206, 206, 206, 0.1);
+  }
+
+  a {
+    color: var(--color-text) !important;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &.router-link-active {
+      color: var(--primary) !important;
+    }
+
+    &:hover {
+      color: var(--primary) !important;
+      cursor: pointer;
+    }
+  }
+}
+
+
 .landing {
   margin-bottom: 15rem;
 
