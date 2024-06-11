@@ -76,6 +76,38 @@
           </div>
         </li>
       </ul>
+      <ul class="additionalTechs">
+        <li>
+          <div class="icon">
+            <img src="/icons/React.png" alt="logo du framework ReactJs">
+          </div>
+          <h4>ReactJs</h4>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="/icons/threejs.png" alt="logo du framework ThreeJs">
+          </div>
+          <h4>ThreeJs</h4>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="/icons/Unity.png" alt="logo du logiciel Unity">
+          </div>
+          <h4>Unity</h4>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="/icons/Postman.png" alt="logo du logiciel Postman">
+          </div>
+          <h4>Postman</h4>
+        </li>
+        <li>
+          <div class="icon">
+            <img src="/icons/multipass.png" alt="logo du logiciel Multipass">
+          </div>
+          <h4>Multipass</h4>
+        </li>
+      </ul>
     </article>
   </section>
 </template>
@@ -129,6 +161,19 @@
           opacity: 1;
         }
       }
+    }
+  }
+
+  .additionalTechs {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: start;
+    margin-top: 3rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
     }
   }
 }

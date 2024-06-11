@@ -1,5 +1,6 @@
 <script setup>
 import {RouterLink, RouterView} from 'vue-router'
+import Projet from '../views/UnifolioView.vue'
 </script>
 
 <template>
@@ -21,6 +22,11 @@ import {RouterLink, RouterView} from 'vue-router'
           </div>
         </div>
       </div>
+      <div>
+        <router-link to="/unifolio">
+          Découvrir
+        </router-link>
+      </div>
     </article>
     <article>
       <div class="banniere" style="background-image: url(/img/intranet.png)"></div>
@@ -39,6 +45,8 @@ import {RouterLink, RouterView} from 'vue-router'
           </div>
         </div>
       </div>
+      <div>
+      </div>
     </article>
     <article>
       <div class="banniere" style="background-image: url(/img/wwcv2.png)"></div>
@@ -55,6 +63,27 @@ import {RouterLink, RouterView} from 'vue-router'
             <p>EasyAdmin, UX Turbo, Mercure</p>
           </div>
         </div>
+      </div>
+      <div>
+      </div>
+    </article>
+    <article>
+      <div class="banniere" style="background-image: url(/img/roy.png)"></div>
+      <div class="infos">
+        <h2>Roy Lunetier</h2>
+        <p>P.O.C d'un viewer 3D</p>
+        <em>Conception, Maquettage, Développement</em>
+        <div>
+          <div class="icon">
+            <img src="/icons/React.png" alt="logo du framework ReactJs">
+          </div>
+          <div class="descript">
+            <h4>ReactJs</h4>
+            <p>Three Fiber</p>
+          </div>
+        </div>
+      </div>
+      <div>
       </div>
     </article>
   </section>
@@ -78,6 +107,16 @@ import {RouterLink, RouterView} from 'vue-router'
   article {
     width: 100%;
     height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+
+    &:hover > .banniere {
+      filter: grayscale(0);
+      transition: 0.5s ease-in-out;
+    }
 
     .banniere {
       width: 100%;
@@ -100,61 +139,88 @@ import {RouterLink, RouterView} from 'vue-router'
       height: 100%;
       padding: 0 2rem;
 
-    h2 {
-      color: var(--color-text);
-      opacity: 1;
-      font-size: 7rem;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    p {
-      font-size: 1.5rem;
-      font-weight: 500;
-      opacity: 1;
-    }
-
-    div {
-      display: flex;
-      gap: 2rem;
-
-      .icon {
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        background-color: #1D1D1D;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: solid 1px rgba(206, 206, 206, 0.1);
-
-        img {
-          width: 100%;
-        }
+      h2 {
+        color: var(--color-text);
+        opacity: 1;
+        font-size: 7rem;
+        text-transform: uppercase;
+        font-weight: 700;
       }
 
-      .descript {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 0.5rem;
+      p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        opacity: 1;
+      }
 
-        h4 {
-          margin: 0;
-          opacity: 1;
-          font-weight: 600;
+      div {
+        display: flex;
+        gap: 2rem;
+
+        .icon {
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+          background-color: #1D1D1D;
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: solid 1px rgba(206, 206, 206, 0.1);
+
+          img {
+            width: 100%;
+          }
         }
 
-        p {
-          font-size: 1.25rem;
-          font-weight: 300;
-          opacity: 1;
+        .descript {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 0.5rem;
+
+          h4 {
+            margin: 0;
+            opacity: 1;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 1.25rem;
+            font-weight: 300;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    a {
+      color: var(--color-text) !important;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 1rem 0;
+
+      &:after {
+        content: '';
+        display: flex;
+        width: 25px;
+        height: 2px;
+        background-color: var(--primary);
+        margin-right: 5px;
+        border-radius: 1px;
+        margin-top: 1rem;
+        transition: width 0.3s;
+      }
+
+      &:hover {
+
+        &:after {
+          width: 100%;
+          transition: width 0.3s;
         }
       }
     }
   }
-}
 
 }
 </style>
