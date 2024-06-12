@@ -9,22 +9,9 @@
     --secondary: #42DFDF;
     --secondary-dark: rgba(3, 23, 23, 0.95);
     --border: #656565;
-}
-
-/* semantic color variables for this project */
-:root {
-    --color-background: var(--white);
-    --color-card: #e5e5e5;
-    --color-text: var(--black);
-    --color-border: var(--border);
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: var(--black);
-        --color-card: #333;
-        --color-text: var(--white);
-    }
+    --color-background: var(--black);
+    --color-card: #333;
+    --color-text: var(--white);
 }
 
 *,
