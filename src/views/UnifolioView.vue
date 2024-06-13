@@ -101,22 +101,62 @@
       </article>
 
       <article class="v1">
-        <div class="chapo">
-          <h3>V1</h3>
-          <p>
-            La première version d'UniFolio a été déployée en octobre 2023 après 10 mois de développement. Testée par
-            deux promotions pilotes, sa réception a été très positive. Elle a permis de recueillir des retours
-            utilisateurs et de définir les axes d'amélioration pour la V2.
-
-            <!--            elle a permis de recueillir des retours utilisateurs et de définir les axes d'amélioration pour la V2.-->
-          </p>
+        <div class="infos_projet">
+          <div class="chapo">
+            <h3>V1</h3>
+            <p>
+              La première version d'UniFolio a été déployée en octobre 2023 après 10 mois de développement. Testée par
+              deux promotions pilotes, sa réception a été très positive. Elle a permis de recueillir des retours
+              utilisateurs et de définir les axes d'amélioration pour la V2.
+            </p>
+          </div>
+          <div class="da">
+            <div>
+              <h4>Design</h4>
+              <em>
+                Sobriété et simplicité pour une meilleure expérience utilisateur.
+              </em>
+            </div>
+            <p>
+              J'ai designé le logo en m'inspirant très largement de celui de l'intranet de l'IUT de Troyes pour créer une continuité visuelle entre les deux outils.
+            </p>
+           <div class="logos">
+             <figure>
+               <div class="logo">
+                 <img src="/img/unifolio_logo.png" alt="logo de l'outil Unifolio">
+               </div>
+               <figcaption>Logo d'UniFolio</figcaption>
+             </figure>
+             <figure>
+               <div class="logo" style="padding: 0">
+                 <img src="/img/logo_intranet_iut_troyes.svg" alt="logo de l'outil Unifolio">
+               </div>
+               <figcaption>Logo de l'intranet</figcaption>
+             </figure>
+           </div>
+          </div>
         </div>
+
         <figure>
           <img src="/img/test1.png" alt="aperçu du dashboard de la v1">
           <figcaption>
             Aperçu du dashboard de la V1
           </figcaption>
         </figure>
+      </article>
+      <article class="v1">
+        <figure>
+          <img src="/img/unifolio_v2_ipad_mockup.png" alt="aperçu du dashboard de la v2">
+          <figcaption>
+            Aperçu du dashboard de la V2
+          </figcaption>
+        </figure>
+        <div class="chapo">
+          <h3>V2</h3>
+          <p>
+            Actuellement en cours de développement, la V2 d'UniFolio est prévue pour la rentrée 2024.
+          </p>
+        </div>
       </article>
     </section>
   </main>
@@ -269,54 +309,16 @@
 
   .v1 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-top: 20rem;
-    margin-left: 15%;
-
-    .chapo {
-      width: 40%;
-
-      h3 {
-        font-size: 5rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        opacity: 1;
-
-        &:before {
-          content: '[';
-          font-size: 7rem;
-          font-weight: 200;
-        }
-
-        &:after {
-          content: ']';
-          font-size: 7rem;
-          font-weight: 200;
-        }
-      }
-
-      p {
-        padding-left: 3rem;
-
-        &:before {
-          content: '';
-          position: absolute;
-          margin-left: -13rem;
-          margin-top: 1rem;
-          width: 12rem;
-          height: 1px;
-          background-color: var(--primary);
-        }
-      }
-    }
 
     figure {
+      width: 60%;
 
       img {
         width: 100%;
         border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        opacity: .9;
+        opacity: .8;
       }
 
       figcaption {
@@ -324,6 +326,99 @@
         font-weight: 300;
         opacity: .7;
         text-align: right;
+      }
+    }
+
+    .infos_projet {
+      width: 40%;
+      margin-left: 10rem;
+      display: flex;
+      flex-direction: column;
+      gap: 7rem;
+
+      .chapo {
+
+        h3 {
+          font-size: 5rem;
+          font-weight: 800;
+          text-transform: uppercase;
+          opacity: 1;
+
+          &:before {
+            content: '[';
+            font-size: 7rem;
+            font-weight: 200;
+          }
+
+          &:after {
+            content: ']';
+            font-size: 7rem;
+            font-weight: 200;
+          }
+        }
+
+        p {
+          padding-left: 3rem;
+
+          &:before {
+            content: '';
+            position: absolute;
+            margin-left: -6rem;
+            margin-top: 1rem;
+            width: 5rem;
+            height: 2px;
+            background-color: var(--primary);
+          }
+        }
+      }
+
+      .da {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        .logos {
+          display: flex;
+          flex-direction: row;
+          gap: 3rem;
+
+          figure {
+            width: 150px;
+
+            .logo {
+              width: 150px;
+              height: 150px;
+              padding: 25px;
+              background-color: rgba(255, 255, 255, 0.1);
+              border-radius: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              img {
+                width: 100%;
+              }
+
+              &:before {
+                content: '';
+                position: absolute;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+                width: 150px;
+                height: 150px;
+                border: solid 1px rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                z-index: -1;
+              }
+            }
+
+            figcaption {
+              text-align: start;
+              font-weight: 300;
+              opacity: .7;
+            }
+          }
+        }
       }
     }
   }
