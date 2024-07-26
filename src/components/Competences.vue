@@ -182,7 +182,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 200vh;
+  top: 320vh;
   right: 0;
   overflow-x: hidden;
 
@@ -201,7 +201,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 240vh;
+  top: 260vh;
   left: 0;
   overflow-x: hidden;
 

@@ -4,101 +4,101 @@
 
 <template>
   <main>
-    <nav>
-      <router-link to="/">Retour à l'accueil</router-link>
-    </nav>
     <section id="projet">
-      <article class="title">
+      <nav>
+        <router-link to="/">Retour à l'accueil</router-link>
+      </nav>
+      <div class="title">
         <h1><span>[</span>UniFolio<span>]</span></h1>
-        <h2>2023-2024</h2>
-      </article>
-      <article class="intro">
-        <h2>
-          Outil de création, suivi et évaluation de portfolios universitaires
-        </h2>
-        <p>
-          UniFolio est un outil que j'ai conçu et développé dans le cadre de mon alternance au service informatique de
-          l'IUT de Troyes. Il permet aux étudiants de créer leur portfolio universitaire et aux enseignants d'en assurer
-          le suivi et l'évaluation. L'objectif est de faciliter la mise en place de portfolios numériques pour les
-          étudiants et les enseignants dans une démarche pédagogique centralisée pour tous les département de
-          l'Université.
-        </p>
-      </article>
+        <h2>2022-2024</h2>
+      </div>
+            <div class="intro">
+              <h2>
+                Outil de création, suivi et évaluation de portfolios universitaires
+              </h2>
+              <p>
+                UniFolio est un outil que j'ai conçu et développé dans le cadre de mon alternance au service informatique de
+                l'IUT de Troyes. Il permet aux étudiants de créer leurs portfolios universitaires et aux enseignants d'en assurer
+                le suivi et l'évaluation. L'objectif est de faciliter la mise en place de portfolios numériques pour les
+                étudiants et les enseignants dans une démarche pédagogique centralisée pour tous les département de
+                l'Université.
+              </p>
+            </div>
 
-      <article id="competences">
-        <div>
-          <h3>Outils et technologies utilisés</h3>
-          <ul>
-            <li>
-              <div class="icon">
-                <img src="/icons/sf.png" alt="logo du framework symfony">
+            <div id="competences">
+              <div>
+                <h3>Outils et technologies utilisés</h3>
+                <ul>
+                  <li>
+                    <div class="icon">
+                      <img src="/icons/sf.png" alt="logo du framework symfony">
+                    </div>
+                    <div class="descript">
+                      <h4 style="color: #A3DF42">Symfony ✨</h4>
+                      <p>UX Live Components, UX Turbo, EasyAdmin</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="/icons/Bootstrap.png" alt="logo du framework bootstrap">
+                    </div>
+                    <div class="descript">
+                      <h4>Bootstrap</h4>
+                      <p>
+                        Grid, Components, Responsive Design
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="/icons/Git.png" alt="logo de Git">
+                    </div>
+                    <div class="descript">
+                      <h4>Git</h4>
+                      <p>
+                        GitHub, Versionning, GitFlow
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <div class="descript">
-                <h4 style="color: #A3DF42">Symfony ✨</h4>
-                <p>UX Live Components, UX Turbo, EasyAdmin</p>
+              <div>
+                <h3>Compétences mises en oeuvre</h3>
+                <ul>
+                  <li>
+                    <div class="icon">
+                      <img src="/icons/conception.png" alt="icone représesntant la conception">
+                    </div>
+                    <div class="descript">
+                      <h4>Conception</h4>
+                      <p>Définition des besoins, des fonctionnalités et des interfaces</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="/icons/gestion-de-projet.png" alt="icone représentant la gestion de projet">
+                    </div>
+                    <div class="descript">
+                      <h4>Gestion de projet</h4>
+                      <p>
+                        Planification, Suivi, Choix des technologies
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="icon">
+                      <img src="/icons/developpement.png" alt="icone représentation le développement">
+                    </div>
+                    <div class="descript">
+                      <h4>Développement</h4>
+                      <p>
+                        Frontend, Backend, Base de données
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="/icons/Figma.png" alt="logo du logiciel Figma">
-              </div>
-              <div class="descript">
-                <h4>Figma</h4>
-                <p>
-                  Prototypes, Design Systems
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="/icons/Git.png" alt="logo de Git">
-              </div>
-              <div class="descript">
-                <h4>Git</h4>
-                <p>
-                  GitHub, Versionning, GitFlow
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3>Compétences mises en oeuvre</h3>
-          <ul>
-            <li>
-              <div class="icon">
-                <img src="/icons/conception.png" alt="icone représesntant la conception">
-              </div>
-              <div class="descript">
-                <h4>Conception</h4>
-                <p>Définition des besoins, des fonctionnalités et des interfaces</p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="/icons/gestion-de-projet.png" alt="icone représentant la gestion de projet">
-              </div>
-              <div class="descript">
-                <h4>Gestion de projet</h4>
-                <p>
-                  Planification, Suivi, Choix des technologies
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="icon">
-                <img src="/icons/developpement.png" alt="icone représentation le développement">
-              </div>
-              <div class="descript">
-                <h4>Développement</h4>
-                <p>
-                  Frontend, Backend, Base de données
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </article>
+            </div>
 
       <article class="v1">
         <div class="infos_projet">
@@ -120,43 +120,29 @@
             <p>
               J'ai designé le logo en m'inspirant très largement de celui de l'intranet de l'IUT de Troyes pour créer une continuité visuelle entre les deux outils.
             </p>
-           <div class="logos">
-             <figure>
-               <div class="logo">
-                 <img src="/img/unifolio_logo.png" alt="logo de l'outil Unifolio">
-               </div>
-               <figcaption>Logo d'UniFolio</figcaption>
-             </figure>
-             <figure>
-               <div class="logo" style="padding: 0">
-                 <img src="/img/logo_intranet_iut_troyes.svg" alt="logo de l'outil Unifolio">
-               </div>
-               <figcaption>Logo de l'intranet</figcaption>
-             </figure>
-           </div>
+            <div class="logos">
+              <figure>
+                <div class="logo">
+                  <img src="/img/unifolio_logo.png" alt="logo de l'outil Unifolio">
+                </div>
+                <figcaption>Logo d'UniFolio</figcaption>
+              </figure>
+              <figure>
+                <div class="logo" style="padding: 0">
+                  <img src="/img/logo_intranet_iut_troyes.svg" alt="logo de l'outil Unifolio">
+                </div>
+                <figcaption>Logo de l'intranet</figcaption>
+              </figure>
+            </div>
           </div>
         </div>
 
         <figure>
-          <img src="/img/test1.png" alt="aperçu du dashboard de la v1">
+          <img src="/img/unifolio_mockup_dashboard.png" alt="aperçu de la v1">
           <figcaption>
             Aperçu du dashboard de la V1
           </figcaption>
         </figure>
-      </article>
-      <article class="v1">
-        <figure>
-          <img src="/img/unifolio_v2_ipad_mockup.png" alt="aperçu du dashboard de la v2">
-          <figcaption>
-            Aperçu du dashboard de la V2
-          </figcaption>
-        </figure>
-        <div class="chapo">
-          <h3>V2</h3>
-          <p>
-            Actuellement en cours de développement, la V2 d'UniFolio est prévue pour la rentrée 2024.
-          </p>
-        </div>
       </article>
     </section>
   </main>
@@ -169,6 +155,33 @@
   flex-direction: column;
   margin-top: 5rem;
 
+  a {
+    color: var(--color-text) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 0;
+
+    &:after {
+      content: '';
+      display: flex;
+      width: 25px;
+      height: 2px;
+      background-color: var(--primary);
+      margin-right: 5px;
+      border-radius: 1px;
+      margin-top: 1rem;
+      transition: width 0.3s;
+    }
+
+    &:hover {
+
+      &:after {
+        width: 100%;
+        transition: width 0.3s;
+      }
+    }
+  }
+
   .title {
 
     h1 {
@@ -176,8 +189,8 @@
       text-transform: uppercase;
       font-weight: 900;
       text-align: end;
-      margin-right: 15%;
       position: relative;
+      color: var(--white);
 
       span {
         font-weight: 300;
@@ -188,21 +201,11 @@
         content: 'UniFolio';
         position: absolute;
         top: -2rem;
-        right: -20rem;
+        right: -5rem;
         font-size: 15rem;
         font-weight: 900;
         color: var(--secondary);
         opacity: .1;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 32%;
-        width: 15%;
-        height: 3px;
-        background-color: var(--primary);
       }
     }
 

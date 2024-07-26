@@ -29,22 +29,39 @@ const formatText = (text) => {
 
         <div>
           <h2 v-html="formatText('Qualité')"></h2>
+          <h3>Approche</h3>
           <p>
             Optimiser la qualité du code en usant de bonnes pratiques de développement tels que les Design Patterns.
+          </p>
+          <br>
+          <h3>Objectifs</h3>
+          <p>
+            Intégrer systématiquement des revues de code et des tests automatisés pour garantir la robustesse et la qualité du code produit.
           </p>
         </div>
         <div>
           <h2 v-html="formatText('Accessibilité')"></h2>
+          <h3>Approche</h3>
           <p>
             Respecter les normes techniques établies par la Web Accessibility Initiative (WAI) du World Wide Web
             Consortium (W3C)
           </p>
+          <br>
+          <h3>Objectifs</h3>
+          <p>
+            Mener des audits réguliers d'accessibilité et impliquer des utilisateurs réels dans les phases de tests pour valider et améliorer continuellement l'accessibilité des applications.
+          </p>
         </div>
         <div>
           <h2 v-html="formatText('Eco-conception')"></h2>
+          <h3>Approche</h3>
           <p>
-            Concevoir des applications web éco-responsables en limitant les contenus energivores et en optimisant les
-            performances.
+            Adopter une démarche de conception durable en réduisant l'empreinte carbone des sites web via l'optimisation des ressources, la minimisation des requêtes et l'utilisation de technologies efficientes.
+          </p>
+          <br>
+          <h3>Objectifs</h3>
+          <p>
+            Réaliser des audits de performance réguliers et mettre en place des actions correctives pour réduire l'impact environnemental des applications.
           </p>
         </div>
       </div>
@@ -66,11 +83,17 @@ const formatText = (text) => {
     align-items: center;
     gap: 1rem;
 
+    p {
+      width: 50%;
+      margin: 0 auto;
+    }
+
     #galaxy {
       transform: rotate(-11.45deg);
       position: absolute;
-      top: 150vh;
-      width: 50%;
+      top: 160vh;
+      left: 60%;
+      width: 70%;
       height: 100px;
       opacity: .8;
       z-index: -1;

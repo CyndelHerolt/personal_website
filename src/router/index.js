@@ -15,7 +15,11 @@ const router = createRouter({
       name: 'unifolio',
       component: UnifolioView
     }
-  ]
+  ], scrollBehavior(to, from, savedPosition) {
+    return { top: 0 }
+  }
 })
+
+
 
 export default router
