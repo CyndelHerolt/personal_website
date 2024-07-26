@@ -32,7 +32,7 @@ onMounted(() => {
   <main>
     <section class="landing">
       <article>
-        <img src="/img/minimoi.png" alt="auto-portrait">
+        <img src="/img/line.png" alt="illustration">
         <div class="intro">
           <div>
             <h1>Cyndel Herolt</h1>
@@ -124,9 +124,9 @@ onMounted(() => {
 
     img {
       width: 400px;
-      opacity: .7;
+      opacity: .8;
       background-color: transparent;
-      border-radius: 50%;
+      //border-radius: 50%;
       z-index: 1;
     }
 
