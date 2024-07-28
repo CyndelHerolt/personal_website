@@ -7,7 +7,7 @@ import Projet from '../views/UnifolioView.vue'
   <section id="projets">
     <article>
       <div class="projet-card">
-        <router-link to="/unifolio">
+        <router-link class="underline-link" to="/unifolio">
           Découvrir le projet
         </router-link>
         <div class="title">
@@ -39,34 +39,6 @@ import Projet from '../views/UnifolioView.vue'
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    a {
-      color: var(--color-text) !important;
-      text-decoration: none;
-      text-transform: uppercase;
-      padding: 1rem 0;
-      z-index: 2;
-
-      &:after {
-        content: '';
-        display: flex;
-        width: 25px;
-        height: 2px;
-        background-color: var(--primary);
-        margin-right: 5px;
-        border-radius: 1px;
-        margin-top: 1rem;
-        transition: width 0.3s;
-      }
-
-      &:hover {
-
-        &:after {
-          width: 100%;
-          transition: width 0.3s;
-        }
-      }
-    }
 
     .title {
 

@@ -51,8 +51,8 @@ onMounted(() => {
   </div>
   <div class="radial"></div>
   <nav class="reseaux">
-    <a href="https://github.com/CyndelHerolt" target="_blank">GitHub <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
-    <a href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank">LinkedIn <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
+    <a class="underline-link" href="https://github.com/CyndelHerolt" target="_blank">GitHub <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
+    <a class="underline-link" href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank">LinkedIn <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
   </nav>
   <RouterView/>
 </template>
@@ -64,33 +64,6 @@ onMounted(() => {
   display: flex;
   justify-content: start;
   gap: 2rem;
-
-  a {
-    color: var(--color-text) !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 1rem 0;
-
-    &:after {
-      content: '';
-      display: flex;
-      width: 25px;
-      height: 2px;
-      background-color: var(--primary);
-      margin-right: 5px;
-      border-radius: 1px;
-      margin-top: 1rem;
-      transition: width 0.3s;
-    }
-
-    &:hover {
-
-      &:after {
-        width: 100%;
-        transition: width 0.3s;
-      }
-    }
-  }
 }
 
 .cols {
