@@ -6,7 +6,9 @@
     --white: #CECECE;
     --black: #000000;
     --primary: #A3DF42;
+    --light-priamry: rgba(163, 223, 66, 0.3);
     --secondary: #42DFDF;
+    --light-secondary: rgba(66, 223, 223, 0.3);
     --secondary-dark: rgba(3, 23, 23, 0.95);
     --border: #656565;
     --color-background: var(--black);
@@ -107,4 +109,51 @@ span:hover {
 p {
     opacity: .8;
     font-family: Montserrat, sans-serif;
+}
+
+.underline-link {
+    color: var(--color-text) !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    width: fit-content;
+
+    &:after {
+        content: '';
+        display: flex;
+        width: 25px;
+        height: 2px;
+        background-color: var(--primary);
+        margin-right: 5px;
+        border-radius: 1px;
+        margin-top: 1rem;
+        transition: width 0.3s;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        &:after {
+            width: 100%;
+            transition: width 0.3s;
+        }
+    }
+}
+
+.link {
+    color : var(--white) !important;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: .5rem 1rem;
+    width: fit-content;
+
+    &:hover {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.25);
+        color: white !important;
+        transition: background-color 0.3s;
+    }
 }
