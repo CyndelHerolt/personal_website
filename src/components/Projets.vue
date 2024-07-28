@@ -5,13 +5,14 @@ import Projet from '../views/UnifolioView.vue'
 
 <template>
   <section id="projets">
+    <h2>Projets web</h2>
     <article>
       <div class="projet-card">
         <router-link class="underline-link" to="/unifolio">
           Découvrir le projet
         </router-link>
         <div class="title">
-          <h1><span>[</span>UniFolio<span>]</span></h1>
+          <h1 class="unifolio"><span>[</span>UniFolio<span>]</span></h1>
           <h2>2022-2024</h2>
         </div>
       </div>
@@ -19,8 +20,47 @@ import Projet from '../views/UnifolioView.vue'
         <h2>
           Outil de création, suivi et évaluation de portfolios universitaires
         </h2>
-
       </div>
+    </article>
+    <article>
+      <div class="projet-card">
+        <router-link class="underline-link" to="/intranet">
+          Découvrir le projet
+        </router-link>
+        <div class="title">
+          <h1 class="intranet"><span>[</span>Intranet<span>]</span></h1>
+          <h2>2022-2024</h2>
+        </div>
+      </div>
+      <div class="preview">
+        <h2>
+          Outil gestion de formations universitaires
+        </h2>
+      </div>
+    </article>
+    <article>
+      <div class="projet-card">
+        <router-link class="underline-link" to="/roylunetier">
+          Découvrir le projet
+        </router-link>
+        <div class="title">
+          <h1 class="roylunetier"><span>[</span>RoyLunetier<span>]</span></h1>
+          <h2>2023-2024</h2>
+        </div>
+      </div>
+      <div class="preview">
+        <h2>
+          P.O.C d'un viewer 3D
+        </h2>
+      </div>
+    </article>
+
+    <h2>
+      Projets graphiques
+    </h2>
+    <article>
+      <h3>Illustrations</h3>
+      <h3>Photos</h3>
     </article>
   </section>
 </template>
@@ -35,6 +75,7 @@ import Projet from '../views/UnifolioView.vue'
   gap: 5rem;
 
   .projet-card {
+    margin-top: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,17 +96,6 @@ import Projet from '../views/UnifolioView.vue'
           font-size: 7rem;
         }
 
-        &:before {
-          content: 'UniFolio';
-          position: absolute;
-          top: -2rem;
-          right: -5rem;
-          font-size: 15rem;
-          font-weight: 900;
-          color: var(--secondary);
-          opacity: .1;
-        }
-
         &:after {
           content: '';
           position: absolute;
@@ -77,11 +107,42 @@ import Projet from '../views/UnifolioView.vue'
         }
       }
 
+      .unifolio:before {
+        content: 'UniFolio';
+        position: absolute;
+        top: -2rem;
+        right: -5rem;
+        font-size: 15rem;
+        font-weight: 900;
+        color: var(--secondary);
+        opacity: .1;
+      }
+      .intranet:before {
+        content: 'Intranet';
+        position: absolute;
+        top: -2rem;
+        right: -5rem;
+        font-size: 15rem;
+        font-weight: 900;
+        color: var(--secondary);
+        opacity: .1;
+      }
+      .roylunetier:before {
+        content: 'RoyLunetier';
+        position: absolute;
+        top: -2rem;
+        right: -5rem;
+        font-size: 15rem;
+        font-weight: 900;
+        color: var(--secondary);
+        opacity: .1;
+      }
+
+
       h2 {
         font-size: 2rem;
         font-weight: 600;
         text-align: end;
-        margin-right: 15%;
         position: relative;
         opacity: .8;
       }
