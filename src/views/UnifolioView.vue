@@ -31,7 +31,7 @@
 
       <div id="competences">
         <div>
-          <h3>Outils et technologies utilisés</h3>
+          <h3>Outils et technologies</h3>
           <ul>
             <li>
               <div class="icon">
@@ -310,6 +310,10 @@
     display: flex;
     flex-direction: row;
     gap: 5rem;
+
+    p {
+      margin-bottom: 2rem;
+    }
 
     .video {
       width: 60%;

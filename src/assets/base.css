@@ -117,6 +117,7 @@ p {
     text-transform: uppercase;
     padding: 1rem 0;
     width: fit-content;
+    display: block;
 
     &:after {
         content: '';
@@ -156,4 +157,10 @@ p {
         color: white !important;
         transition: background-color 0.3s;
     }
+}
+
+figcaption {
+    font-family: Montserrat, sans-serif;
+    opacity: .8;
+    margin: 1rem 0;
 }
