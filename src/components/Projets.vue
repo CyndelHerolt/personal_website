@@ -60,7 +60,79 @@ import Projet from '../views/UnifolioView.vue'
     </h2>
     <article>
       <h3>Illustrations</h3>
+      <p>Les images que j'utilise pour construire mes projets graphiques sont libres de droit et proviennent du site de
+        la
+        <a href="https://www.bnf.fr/fr/images-en-ligne" target="_blank">BNF <i class="fas fa-arrow-alt-circle-up"
+                                                                               style="transform: rotate(45deg)"></i></a>
+        ou de <a href="http://www2.culture.gouv.fr/documentation/archim/accueil.html" target="_blank">Archim <i
+            class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>. Il peut également s'agir de
+        photos personnelles.
+      </p>
+      <div class="illu">
+        <figure>
+          <img src="/illu/affiche1.png" alt="illustration 2">
+          <figcaption>
+            Réinterprétation de l'affiche de <a href="https://www.nosrevesfontdubruit.fr/retrospective-edition-3/"
+                                                target="_blank">
+            ce concert <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="/illu/affiche2.png" alt="illustration 3">
+          <figcaption>
+            Réinterprétation de l'affiche de <a href="https://www.nosrevesfontdubruit.fr/retrospective-edition-3/"
+                                                target="_blank">
+            ce concert <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="/illu/illu1.png" alt="illustration 1">
+          <figcaption>
+            Illustration d'archive retravaillée
+          </figcaption>
+        </figure>
+      </div>
+    </article>
+    <article>
       <h3>Photos</h3>
+      <div class="photos">
+        <figure><img src="/photos/malta.jpg" alt="">
+          <figcaption>Malta</figcaption>
+        </figure>
+        <figure><img src="/photos/valee.jpg" alt="">
+          <figcaption>Valée de la Clarée</figcaption>
+        </figure>
+        <figure><img src="/photos/nevache.jpg" alt="">
+          <figcaption>Valée de la Clarée</figcaption>
+        </figure>
+        <figure><img src="/photos/clown2.jpg" alt="">
+          <figcaption>La Rochelle</figcaption>
+        </figure>
+        <figure><img src="/photos/meduses2.jpg" alt="">
+          <figcaption>La Rochelle</figcaption>
+        </figure>
+        <figure><img src="/photos/mouette1.jpg" alt="">
+          <figcaption>Biarritz</figcaption>
+        </figure>
+        <figure><img src="/photos/bridge.jpg" alt="">
+          <figcaption>Paris</figcaption>
+        </figure>
+        <figure><img src="/photos/rer.jpg" alt="">
+          <figcaption>Paris</figcaption>
+        </figure>
+        <figure><img src="/photos/lezard.jpg" alt="">
+          <figcaption>Malta</figcaption>
+        </figure>
+        <figure><img src="/photos/castle.jpg" alt="">
+          <figcaption>Malta</figcaption>
+        </figure>
+        <figure><img src="/photos/archi.jpg" alt="">
+          <figcaption>Malta</figcaption>
+        </figure>
+        <figure><img src="/photos/portrait.jpg" alt="">
+          <figcaption>Les Bordes-Aumont</figcaption>
+        </figure>
+      </div>
     </article>
   </section>
 </template>
@@ -117,6 +189,7 @@ import Projet from '../views/UnifolioView.vue'
         color: var(--secondary);
         opacity: .1;
       }
+
       .intranet:before {
         content: 'Intranet';
         position: absolute;
@@ -127,6 +200,7 @@ import Projet from '../views/UnifolioView.vue'
         color: var(--secondary);
         opacity: .1;
       }
+
       .roylunetier:before {
         content: 'RoyLunetier';
         position: absolute;
@@ -158,6 +232,54 @@ import Projet from '../views/UnifolioView.vue'
   .preview {
     h2 {
       text-align: end;
+    }
+  }
+}
+
+.illu {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 5rem;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      border: solid 1px var(--color-card);
+    }
+
+    figcaption {
+      opacity: .8;
+      font-family: Montserrat, sans-serif;
+    }
+  }
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1rem;
+  margin-top: 5rem;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      border: solid 1px var(--color-card);
+    }
+
+    figcaption {
+      opacity: .8;
+      font-family: Montserrat, sans-serif;
     }
   }
 }

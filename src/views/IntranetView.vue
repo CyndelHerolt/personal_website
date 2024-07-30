@@ -154,7 +154,7 @@
             Via des requêtes API, j'ai développé un système de récupération automatique des cours qui vient créer au sein de l'outil EduSign toutes les données nécessaires à son bon fonctionnement. J'ai également développé une interface dans l'Intranet afin de déclencher manuellement certaines actions comme l'ajout de cours ou d'enseignants.
           </p>
         </div>
-        <a class="underline-link" href="https://github.com/CyndelHerolt/intranetV3/tree/main/src/Classes/EduSign">
+        <a class="underline-link" href="https://github.com/CyndelHerolt/intranetV3/tree/main/src/Classes/EduSign" target="_blank">
           Voir le code source <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i>
         </a>
 
