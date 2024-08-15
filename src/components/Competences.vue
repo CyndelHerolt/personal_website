@@ -167,6 +167,7 @@
   .additionalTechs {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 4rem;
     justify-content: start;
     margin-top: 3rem;
@@ -185,13 +186,13 @@
   top: 320vh;
   right: 0;
   overflow-x: hidden;
+  z-index: -2;
 
   .radial {
     position: absolute;
     right: -55%;
     width: 100%;
     height: 100%;
-    z-index: 9;
     background: radial-gradient(circle at center, rgb(66, 223, 223, 0.3) 2%, rgba(21, 21, 21, 0) 40%);
     border-radius: 50%;
   }
@@ -204,6 +205,7 @@
   top: 260vh;
   left: 0;
   overflow-x: hidden;
+  z-index: -2;
 
   .radial {
     position: absolute;

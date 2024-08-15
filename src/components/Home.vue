@@ -55,85 +55,136 @@ onMounted(() => {
       </article>
     </section>
 
-    <Objectifs />
+    <Objectifs/>
 
-    <Competences />
+    <Competences/>
 
-    <Projets />
+    <Projets/>
 
   </main>
 </template>
 
 <style scoped>
-.sticky {
-  position: fixed !important;
-  top: 0;
-  background: transparent;
-}
+@media (min-width: 1024px) {
 
-.menu_container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: fit-content;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
+  .sticky {
+    position: fixed !important;
+    top: 0;
+    background: transparent;
+  }
 
-  .menu {
-    display: flex;
-    gap: 2rem;
-    padding: 2rem 4rem;
-    background-color: var(--secondary-dark);
+  .menu_container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: fit-content;
-    border-radius: 10px;
-    margin: 2rem 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: solid 1px rgba(206, 206, 206, 0.1);
-  }
+    z-index: 1;
+    display: flex;
+    justify-content: center;
 
-  a {
-    color: var(--color-text) !important;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    &.router-link-active {
-      color: var(--primary) !important;
+    .menu {
+      display: flex;
+      gap: 2rem;
+      padding: 2rem 4rem;
+      background-color: var(--secondary-dark);
+      height: fit-content;
+      border-radius: 10px;
+      margin: 2rem 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border: solid 1px rgba(206, 206, 206, 0.1);
     }
 
-    &:hover {
-      color: var(--primary) !important;
-      cursor: pointer;
+    a {
+      color: var(--color-text) !important;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &.router-link-active {
+        color: var(--primary) !important;
+      }
+
+      &:hover {
+        color: var(--primary) !important;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+  .landing {
+    margin-bottom: 15rem;
+
+    article {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 9rem;
+      margin-left: 6rem;
+
+      img {
+        width: 400px;
+        opacity: .8;
+        background-color: transparent;
+        //border-radius: 50%;
+        z-index: 1;
+      }
+
+      .intro {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+
+        h2 {
+          color: var(--primary);
+        }
+
+        ul {
+          padding: 0;
+          display: flex;
+          gap: 2rem;
+
+          li {
+            list-style: none;
+            font-weight: 300;
+          }
+        }
+
+        p {
+          font-family: "Montserrat Alternates", sans-serif;
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          //line-height: 2;
+          font-weight: 500;
+          opacity: 1;
+          color: var(--color-text);
+        }
+      }
     }
   }
 }
 
-
-.landing {
-  margin-bottom: 15rem;
-
+@media (max-width: 1024px) {
   article {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    gap: 9rem;
-    margin-left: 6rem;
+    gap: 2rem;
+    margin-bottom: 10rem;
 
     img {
       width: 400px;
       opacity: .8;
       background-color: transparent;
-      //border-radius: 50%;
       z-index: 1;
     }
 
     .intro {
       display: flex;
       flex-direction: column;
-      width: 40%;
 
       h2 {
         color: var(--primary);
@@ -142,7 +193,9 @@ onMounted(() => {
       ul {
         padding: 0;
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 1rem;
 
         li {
           list-style: none;
@@ -158,25 +211,6 @@ onMounted(() => {
         font-weight: 500;
         opacity: 1;
         color: var(--color-text);
-      }
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  section {
-    flex-direction: column;
-    gap: 2rem;
-
-    article {
-      width: 100%;
-    }
-
-    aside {
-      width: 100%;
-
-      .stack {
-        height: auto;
       }
     }
   }

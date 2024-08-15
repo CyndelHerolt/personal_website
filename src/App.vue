@@ -51,42 +51,44 @@ onMounted(() => {
   </div>
   <div class="radial"></div>
   <nav class="reseaux">
-    <a class="underline-link" href="https://github.com/CyndelHerolt" target="_blank">GitHub <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
-    <a class="underline-link" href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank">LinkedIn <i class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
+    <a class="underline-link" href="https://github.com/CyndelHerolt" target="_blank">GitHub <i
+        class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
+    <a class="underline-link" href="https://www.linkedin.com/in/cyndel-herolt/" target="_blank">LinkedIn <i
+        class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
   </nav>
   <RouterView/>
 </template>
 
 <style scoped>
 
+  .cols {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--color-background);
+    display: flex;
+
+    .col {
+      flex: 1;
+      height: 100%;
+      background: var(--color-background);
+      z-index: 1;
+      border-left: solid 1px rgb(206, 206, 206, 0.1);
+    }
+
+    .uniq {
+      background-color: rgba(13, 13, 13, 0.9);
+    }
+  }
+
 
 .reseaux {
   display: flex;
   justify-content: start;
   gap: 2rem;
-}
-
-.cols {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: var(--color-background);
-  display: flex;
-
-  .col {
-    flex: 1;
-    height: 100%;
-    background: var(--color-background);
-    z-index: 1;
-    border-left: solid 1px rgb(206, 206, 206, 0.1);
-  }
-
-  .uniq {
-    background-color: rgba(13, 13, 13, 0.9);
-  }
 }
 
 .radial {

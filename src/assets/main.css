@@ -1,24 +1,30 @@
 @import './base.css';
 @import './keyframes.css';
 
-#app {
-    padding: 75px 100px;
+a {
+    color: var(--primary);
+    font-weight: bolder;
+    transition: ease-in-out .2s;
 
-    a {
-        color: var(--primary);
-        font-weight: bolder;
+    &:hover {
+        opacity: .8;
         transition: ease-in-out .2s;
-
-        &:hover {
-            opacity: .8;
-            transition: ease-in-out .2s;
-        }
     }
 }
 
 @media (min-width: 1024px) {
+    #app {
+        padding: 75px 100px;
+    }
+
     body {
-        /*margin: 100px;*/
         padding: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    #app {
+        padding: 25px 15px;
+        overflow: hidden;
     }
 }
