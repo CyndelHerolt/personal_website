@@ -226,6 +226,7 @@
       }
 
       &:before {
+        z-index: -1;
         content: 'Intranet';
         position: absolute;
         top: -2rem;

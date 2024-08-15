@@ -118,7 +118,7 @@ p {
     padding: 1rem 0;
     width: fit-content;
     display: block;
-    z-index: 2;
+    z-index: 100;
 
     &:after {
         content: '';

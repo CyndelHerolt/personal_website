@@ -96,15 +96,6 @@ import Projet from '../views/UnifolioView.vue'
     <article>
       <h3>Photos</h3>
       <div class="photos">
-        <figure><img src="/photos/malta.jpg" alt="">
-          <figcaption>Malta</figcaption>
-        </figure>
-        <figure><img src="/photos/valee.jpg" alt="">
-          <figcaption>Valée de la Clarée</figcaption>
-        </figure>
-        <figure><img src="/photos/nevache.jpg" alt="">
-          <figcaption>Valée de la Clarée</figcaption>
-        </figure>
         <figure><img src="/photos/clown2.jpg" alt="">
           <figcaption>La Rochelle</figcaption>
         </figure>
@@ -117,11 +108,11 @@ import Projet from '../views/UnifolioView.vue'
         <figure><img src="/photos/bridge.jpg" alt="">
           <figcaption>Paris</figcaption>
         </figure>
-        <figure><img src="/photos/rer.jpg" alt="">
-          <figcaption>Paris</figcaption>
-        </figure>
-        <figure><img src="/photos/lezard.jpg" alt="">
+        <figure><img src="/photos/malta.jpg" alt="">
           <figcaption>Malta</figcaption>
+        </figure>
+        <figure><img src="/photos/nevache.jpg" alt="">
+          <figcaption>Valée de la Clarée</figcaption>
         </figure>
         <figure><img src="/photos/castle.jpg" alt="">
           <figcaption>Malta</figcaption>

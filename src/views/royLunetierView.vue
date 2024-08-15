@@ -7,60 +7,63 @@
     <section id="projet">
       <router-link class="link" to="/">Retour à l'accueil</router-link>
       <div class="title">
-        <h1><span>[</span>UniFolio<span>]</span></h1>
-        <h2>2022-2024</h2>
+        <h1><span>[</span>Roy Lunetier<span>]</span></h1>
+        <h2>2024</h2>
       </div>
       <div class="intro">
         <div>
           <h2>
-            Outil de création, suivi et évaluation de portfolios universitaires
+            Preuve de concept d'un viewer 3D
           </h2>
           <p>
-            UniFolio est un outil que j'ai conçu et développé dans le cadre de mon alternance au service informatique de
-            l'IUT de Troyes. Il permet aux étudiants de créer leurs portfolios universitaires et aux enseignants d'en
-            assurer
-            le suivi et l'évaluation. L'objectif est de faciliter la mise en place de portfolios numériques pour les
-            étudiants et les enseignants dans une démarche pédagogique centralisée pour tous les département de
-            l'Université.
+            RoyLunetier est un projet de preuve de concept d'un viewer 3D réalisé dans le cadre d'un projet d'étude.
+            L'objectif était de proposer à notre client une solution de visualisation de ses produits en 3D intégrée à son site web existant pour promouvoir les valeurs fortes de ses produits.
           </p>
         </div>
-        <a class="underline-link" href="https://github.com/CyndelHerolt/UniFolioV2" target="_blank">Voir le code source
+        <a class="underline-link" href="https://roy-lunettier.vercel.app" target="_blank">Voir le site de présentation
           <i
               class="fas fa-arrow-alt-circle-up" style="transform: rotate(45deg)"></i></a>
       </div>
 
-      <div id="competences">
+      <article class="demarche">
+        <h3>Démarche</h3>
+        <p>
+          L'objectif pédaogique de ce projet était de nous encourager à découvrir de nouvelles technologies et à les mettre en oeuvre en autonomie et dans un temps très court mais également d'évaluer notre capacité à évaluer les besoins d'un client et à lui proposer une solution adaptée.
+        </p>
+      </article>
+
+      <article id="competences">
         <div>
           <h3>Outils et technologies</h3>
           <ul>
             <li>
               <div class="icon">
-                <img src="/icons/sf.png" alt="logo du framework symfony">
+                <img src="/icons/react.png" alt="logo du framework reactJs">
               </div>
               <div class="descript">
-                <h4 style="color: #A3DF42">Symfony ✨</h4>
-                <p>UX Live Components, UX Turbo, Stimulus, EasyAdmin</p>
+                <h4>ReactJs</h4>
+                <p>Front-End</p>
               </div>
             </li>
             <li>
               <div class="icon">
-                <img src="/icons/Bootstrap.png" alt="logo du framework bootstrap">
+                <img src="/icons/node.png" alt="logo de NodeJs">
               </div>
               <div class="descript">
-                <h4>Bootstrap</h4>
+                <h4>NodeJs + Express</h4>
                 <p>
-                  Grid, Components, Responsive Design
+                  Back-end
                 </p>
               </div>
             </li>
             <li>
               <div class="icon">
-                <img src="/icons/Git.png" alt="logo de Git">
+                <img src="/icons/threejs.png" alt="logo de ThreeJs">
               </div>
               <div class="descript">
-                <h4>Git</h4>
+                <h4>ThreeJs</h4>
                 <p>
-                  GitHub, Versionning, GitFlow
+                  Rendu 3D
                 </p>
               </div>
             </li>
@@ -71,11 +74,11 @@
           <ul>
             <li>
               <div class="icon">
-                <img src="/icons/conception.png" alt="icone représesntant la conception">
+                <img src="/icons/conception.png" alt="icone représentant la conception">
               </div>
               <div class="descript">
-                <h4>Conception</h4>
-                <p>Définition des besoins, des fonctionnalités et des interfaces</p>
+                <h4>Recherche</h4>
+                <p>Découverte et prise en main des technologies</p>
               </div>
             </li>
             <li>
@@ -85,7 +88,7 @@
               <div class="descript">
                 <h4>Gestion de projet</h4>
                 <p>
-                  Planification, Suivi, Choix des technologies
+                  Analyse des besoins de l'entreprise, respect des délais,
                 </p>
               </div>
             </li>
@@ -96,57 +99,9 @@
               <div class="descript">
                 <h4>Développement</h4>
                 <p>
-                  Frontend, Backend, Base de données
+                  Frontend, Rendu 3D, Travail en équipe
                 </p>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--   todo: remplacer par une démo de la V2   -->
-      <article class="demo">
-        <div class="video">
-          <h3>Démonstration</h3>
-          <p>
-            Démo des fonctionnalités principales de l'espace étudiant de la V1 d'UniFolio
-          </p>
-          <iframe width="60%" height="450" src="https://www.youtube.com/embed/XRcDnHOVglY?si=VZ5yc9Oeyb_50ux5"
-                  title="YouTube video player" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div>
-          <h3>Fonctionnalités</h3>
-          <ul>
-            <li>
-              <h4>Création de traces (éléments de portfolio)</h4>
-              <small>
-                Ajout de médias, éditeur de texte
-              </small>
-            </li>
-            <li>
-              <h4>Création de portfolios de compétences universitaires</h4>
-              <small>
-                lien automatique avec les compétences universitaires
-              </small>
-            </li>
-            <li>
-              <h4>Suivi des évaluations</h4>
-              <small>
-                Consultation des évaluations, des commentaires et des notes
-              </small>
-            </li>
-            <li>
-              <h4><span>À venir - </span>Création de portfolios de présentation</h4>
-              <small>
-                Editeur de pages, personnalisation des contenus, export multi-formats
-              </small>
-            </li>
-            <li>
-              <h4><span>À venir - </span>Création de CV</h4>
-              <small>
-                Ajout de compétences, de formations, d'expériences
-              </small>
             </li>
           </ul>
         </div>
@@ -154,8 +109,8 @@
     </section>
 
     <nav class="projects-nav">
-      <router-link class="link" to="/roylunetier">Projet précédent - Roy Lunetier</router-link>
-      <router-link class="link" to="/intranet">Projet suivant - INTRANET</router-link>
+      <router-link class="link" to="/intranet">Projet précédent - Intranet</router-link>
+      <router-link class="link" to="/unifolio">Projet suivant - UniFolio</router-link>
     </nav>
   </main>
 </template>
@@ -183,7 +138,7 @@
 
       &:before {
         z-index: -1;
-        content: 'UniFolio';
+        content: 'RoyLunetier';
         position: absolute;
         top: -2rem;
         right: -5rem;
@@ -254,7 +209,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding-top: 10rem;
-    margin: 10rem 5rem 0 5rem;
+    margin: 0 5rem 5rem 5rem;
 
     ul {
       display: flex;
@@ -301,51 +256,13 @@
     }
   }
 
-  .demo {
-    margin-top: 15rem;
+  .demarche {
+    margin: 15rem 0 0 0;
     padding: 5rem;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: solid 1px rgba(206, 206, 206, 0.1);
     background-color: var(--secondary-dark);
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-
-    p {
-      margin-bottom: 2rem;
-    }
-
-    .video {
-      width: 60%;
-
-      iframe {
-        width: 100%;
-        opacity: .9;
-      }
-    }
-
-    ul {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      padding: 5rem 0;
-
-      li {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-
-        h4 {
-          opacity: 1;
-
-          span {
-            color: var(--primary);
-          }
-        }
-      }
-    }
   }
 }
 
